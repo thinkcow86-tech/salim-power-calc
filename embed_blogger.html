@@ -1,7 +1,7 @@
 <!-- 가전 소비전력·전기요금 & 멀티탭 안전 계산기 (살림비용노트) -->
 <style>
 #pcc-app { display: block; }
-/* 가전 전기요금 계산기 — 외부 의존성 없는 단일 스타일시트 */
+/* \AC00 \C804  \C804 \AE30 \C694 \AE08  \ACC4 \C0B0 \AE30  \2014  \C678 \BD80  \C758 \C874 \C131  \C5C6 \B294  \B2E8 \C77C  \C2A4 \D0C0 \C77C \C2DC \D2B8  */
 #pcc-app {
   --bg: #f2f4f6;
   --card: #ffffff;
@@ -24,7 +24,7 @@
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard",
-    "Noto Sans KR", "Malgun Gothic", "맑은 고딕", system-ui, sans-serif;
+    "Noto Sans KR", "Malgun Gothic", "\B9D1 \C740  \ACE0 \B515 ", system-ui, sans-serif;
   font-size: 15px;
   line-height: 1.5;
   letter-spacing: -0.01em;
@@ -55,7 +55,7 @@
   z-index: 50;
 }
 #pcc-app .skip-link:focus { left: 0; }
-/* ── 히어로 ─────────────────────────────────────────── */
+/* \2500 \2500  \D788 \C5B4 \B85C  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .hero {
   padding: 40px 0 22px;
   background:
@@ -97,7 +97,7 @@
 }
 #pcc-app .lede strong { color: var(--text); font-weight: 700; }
 #pcc-app .br-mobile { display: inline; }
-/* ── 카드 ───────────────────────────────────────────── */
+/* \2500 \2500  \CE74 \B4DC  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -138,7 +138,7 @@
   font-weight: 700;
   color: var(--text-weak);
 }
-/* 세그먼트 컨트롤 */
+/* \C138 \ADF8 \BA3C \D2B8  \CEE8 \D2B8 \B864  */
 #pcc-app .segmented {
   display: flex;
   gap: 5px;
@@ -171,7 +171,7 @@
 #pcc-app .seg-title { font-size: 13.5px; }
 #pcc-app .seg-sub { font-size: 10.5px; font-weight: 500; color: var(--text-weak); }
 #pcc-app .segmented button[aria-pressed="true"] .seg-sub { color: #6b7684; }
-/* 숫자 입력 */
+/* \C22B \C790  \C785 \B825  */
 #pcc-app .input-unit {
   display: flex;
   align-items: center;
@@ -237,7 +237,7 @@
 }
 #pcc-app .hint strong { color: var(--text-sub); }
 #pcc-app .hint-top { margin: -6px 0 14px; }
-/* ── 가전 프리셋 ────────────────────────────────────── */
+/* \2500 \2500  \AC00 \C804  \D504 \B9AC \C14B  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .presets {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
@@ -270,7 +270,7 @@
 #pcc-app .p-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 #pcc-app .p-w { font-size: 10.5px; font-weight: 600; color: var(--text-weak); }
 #pcc-app .preset[aria-pressed="true"] .p-w { color: var(--blue-deep); opacity: 0.8; }
-/* 선택한 가전 */
+/* \C120 \D0DD \D55C  \AC00 \C804  */
 #pcc-app .selected {
   display: flex;
   flex-direction: column;
@@ -361,7 +361,7 @@
 #pcc-app .check input { width: 15px; height: 15px; accent-color: var(--blue); margin: 0; }
 #pcc-app .item-kwh { margin-left: auto; color: var(--text-weak); font-variant-numeric: tabular-nums; }
 #pcc-app .item-cost { font-weight: 800; color: var(--blue-deep); font-variant-numeric: tabular-nums; }
-/* 직접 입력 */
+/* \C9C1 \C811  \C785 \B825  */
 #pcc-app .add-box {
   margin-top: 16px;
   padding-top: 14px;
@@ -375,8 +375,8 @@
   list-style: none;
 }
 #pcc-app .add-box summary::-webkit-details-marker { display: none; }
-#pcc-app .add-box summary::after { content: " ＋"; }
-#pcc-app .add-box[open] summary::after { content: " −"; }
+#pcc-app .add-box summary::after { content: " \FF0B "; }
+#pcc-app .add-box[open] summary::after { content: " \2212 "; }
 #pcc-app .add-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -439,7 +439,7 @@
 }
 #pcc-app .btn-primary:hover { background: #2b74e0; }
 #pcc-app .add-btn { grid-column: span 2; }
-/* ── 결과 ───────────────────────────────────────────── */
+/* \2500 \2500  \ACB0 \ACFC  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .big-money {
   padding-bottom: 16px;
   border-bottom: 1px solid #f2f4f6;
@@ -592,7 +592,7 @@
   line-height: 1.6;
   color: #9aa3ad;
 }
-/* ── 멀티탭 안전 ────────────────────────────────────── */
+/* \2500 \2500  \BA40 \D2F0 \D0ED  \C548 \C804  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .safety-head {
   display: flex;
   align-items: center;
@@ -712,7 +712,7 @@
   font-size: 11px;
 }
 #pcc-app .limits strong { color: var(--text-sub); }
-/* ── 요금 근거 ──────────────────────────────────────── */
+/* \2500 \2500  \C694 \AE08  \ADFC \AC70  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .basis summary {
   font-size: 14.5px;
   font-weight: 800;
@@ -723,8 +723,8 @@
   justify-content: space-between;
 }
 #pcc-app .basis summary::-webkit-details-marker { display: none; }
-#pcc-app .basis summary::after { content: "▾"; color: var(--text-weak); font-size: 12px; }
-#pcc-app .basis[open] summary::after { content: "▴"; }
+#pcc-app .basis summary::after { content: "\25BE "; color: var(--text-weak); font-size: 12px; }
+#pcc-app .basis[open] summary::after { content: "\25B4 "; }
 #pcc-app .basis-body { margin-top: 14px; }
 #pcc-app .basis-lead { margin: 0 0 12px; font-size: 12.5px; line-height: 1.6; color: var(--text-sub); }
 #pcc-app .table-scroll { overflow-x: auto; }
@@ -761,7 +761,7 @@
 #pcc-app .basis-list strong { color: var(--text); }
 #pcc-app .basis-src { margin: 12px 0 0; font-size: 11px; line-height: 1.7; color: var(--text-weak); word-break: keep-all; }
 #pcc-app .basis-src a { color: var(--blue-deep); text-decoration: none; border-bottom: 1px solid #cfe0f8; }
-/* ── 프로모션 ──────────────────────────────────────── */
+/* \2500 \2500  \D504 \B85C \BAA8 \C158  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .promo { margin-top: 2px; }
 #pcc-app .blog-card {
   display: flex;
@@ -808,7 +808,7 @@
 #pcc-app .aff-name { font-size: 13px; font-weight: 800; letter-spacing: -0.02em; }
 #pcc-app .aff-desc { font-size: 11px; color: var(--text-weak); line-height: 1.45; }
 #pcc-app .aff-cta { margin-top: 7px; font-size: 10.5px; font-weight: 800; color: var(--blue-deep); }
-/* ── 푸터 / 고정 바 ────────────────────────────────── */
+/* \2500 \2500  \D478 \D130  / \ACE0 \C815  \BC14  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 #pcc-app .footer { padding: 22px 0 104px; }
 #pcc-app .footer p { margin: 0 0 6px; font-size: 11.5px; line-height: 1.6; color: #9aa3ad; }
 #pcc-app .footer-meta { font-size: 11px; }
@@ -858,7 +858,7 @@
   font-size: 13px;
   text-align: center;
 }
-/* ── 반응형 ────────────────────────────────────────── */
+/* \2500 \2500  \BC18 \C751 \D615  \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500 \2500  */
 @media (max-width: 400px) {
 #pcc-app .card { padding: 18px 14px; }
 #pcc-app .presets { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
@@ -1177,38 +1177,38 @@
 
 <script>
 /*
- * tariff.js — 한국전력 주택용 전력 요금 계산 코어 (외부 의존성 없음)
+ * tariff.js \u2014 \uD55C\uAD6D\uC804\uB825 \uC8FC\uD0DD\uC6A9 \uC804\uB825 \uC694\uAE08 \uACC4\uC0B0 \uCF54\uC5B4 (\uC678\uBD80 \uC758\uC874\uC131 \uC5C6\uC74C)
  *
- * ── 적용 기준 (2026-11-20 확인) ─────────────────────────────────────────────
- * 1) 기본요금·전력량요금: 한전 전기요금표 「주택용 전력」, 2023-11-09 시행분이 현행.
- *    - 저압: 200kWh 이하 910원 / 201~400 1,600원 / 400 초과 7,300원
- *            전력량 120.0 / 214.6 / 307.3 원/kWh
- *    - 고압: 730 / 1,260 / 6,060원, 전력량 105.0 / 174.0 / 242.3 원/kWh
- *    - 하계(7.1~8.31)는 단가가 같고 구간만 300 / 450kWh로 넓어진다.
- *    - 1,000kWh 초과분은 하계(7~8월)·동계(12~2월)에 슈퍼유저 요율
- *      (저압 736.2원, 고압 601.3원/kWh) 적용.
- *    출처: https://home.kepco.co.kr/kepco/front/html/CY/E/E/CYEEHP00101.html
- *          기본공급약관 제67조 및 별표1 (2026-04-01 시행), 법제처 생활법령 정보
+ * \u2500\u2500 \uC801\uC6A9 \uAE30\uC900 (2026-11-20 \uD655\uC778) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+ * 1) \uAE30\uBCF8\uC694\uAE08\u00B7\uC804\uB825\uB7C9\uC694\uAE08: \uD55C\uC804 \uC804\uAE30\uC694\uAE08\uD45C \u300C\uC8FC\uD0DD\uC6A9 \uC804\uB825\u300D, 2023-11-09 \uC2DC\uD589\uBD84\uC774 \uD604\uD589.
+ *    - \uC800\uC555: 200kWh \uC774\uD558 910\uC6D0 / 201~400 1,600\uC6D0 / 400 \uCD08\uACFC 7,300\uC6D0
+ *            \uC804\uB825\uB7C9 120.0 / 214.6 / 307.3 \uC6D0/kWh
+ *    - \uACE0\uC555: 730 / 1,260 / 6,060\uC6D0, \uC804\uB825\uB7C9 105.0 / 174.0 / 242.3 \uC6D0/kWh
+ *    - \uD558\uACC4(7.1~8.31)\uB294 \uB2E8\uAC00\uAC00 \uAC19\uACE0 \uAD6C\uAC04\uB9CC 300 / 450kWh\uB85C \uB113\uC5B4\uC9C4\uB2E4.
+ *    - 1,000kWh \uCD08\uACFC\uBD84\uC740 \uD558\uACC4(7~8\uC6D4)\u00B7\uB3D9\uACC4(12~2\uC6D4)\uC5D0 \uC288\uD37C\uC720\uC800 \uC694\uC728
+ *      (\uC800\uC555 736.2\uC6D0, \uACE0\uC555 601.3\uC6D0/kWh) \uC801\uC6A9.
+ *    \uCD9C\uCC98: https://home.kepco.co.kr/kepco/front/html/CY/E/E/CYEEHP00101.html
+ *          \uAE30\uBCF8\uACF5\uAE09\uC57D\uAD00 \uC81C67\uC870 \uBC0F \uBCC4\uD45C1 (2026-04-01 \uC2DC\uD589), \uBC95\uC81C\uCC98 \uC0DD\uD65C\uBC95\uB839 \uC815\uBCF4
  *          https://www.easylaw.go.kr/CSP/IssueQaRetrieve.laf?issueqaSeq=407
  *
- * 2) 기후환경요금: 9.0원/kWh (2023-01-01부터, 변경 공지 없음)
+ * 2) \uAE30\uD6C4\uD658\uACBD\uC694\uAE08: 9.0\uC6D0/kWh (2023-01-01\uBD80\uD130, \uBCC0\uACBD \uACF5\uC9C0 \uC5C6\uC74C)
  *
- * 3) 연료비조정요금: 2026년 4분기(10~12월분) +5.0원/kWh.
- *    한전 2026-09-21 공지 「2026년 4분기 연료비조정단가 산정내역」
- *    (산정 필요단가 7.3원 → 상한 ±5원 적용해 5.0원 확정, 기본·전력량·기후환경요금 동결)
+ * 3) \uC5F0\uB8CC\uBE44\uC870\uC815\uC694\uAE08: 2026\uB144 4\uBD84\uAE30(10~12\uC6D4\uBD84) +5.0\uC6D0/kWh.
+ *    \uD55C\uC804 2026-09-21 \uACF5\uC9C0 \u300C2026\uB144 4\uBD84\uAE30 \uC5F0\uB8CC\uBE44\uC870\uC815\uB2E8\uAC00 \uC0B0\uC815\uB0B4\uC5ED\u300D
+ *    (\uC0B0\uC815 \uD544\uC694\uB2E8\uAC00 7.3\uC6D0 \u2192 \uC0C1\uD55C \u00B15\uC6D0 \uC801\uC6A9\uD574 5.0\uC6D0 \uD655\uC815, \uAE30\uBCF8\u00B7\uC804\uB825\uB7C9\u00B7\uAE30\uD6C4\uD658\uACBD\uC694\uAE08 \uB3D9\uACB0)
  *    https://www.kepco.co.kr/home/media/newsroom/notice/boardView.do?boardMngNo=14&boardNo=2759
- *    ※ 분기마다 바뀌므로 TARIFF.fuel 값을 갱신해야 한다.
+ *    \u203B \uBD84\uAE30\uB9C8\uB2E4 \uBC14\uB00C\uBBC0\uB85C TARIFF.fuel \uAC12\uC744 \uAC31\uC2E0\uD574\uC57C \uD55C\uB2E4.
  *
- * 4) 부가가치세 10% (전기요금계 기준, 원 미만 반올림)
- *    전력산업기반기금 2.7% (2025-07-01 사용분부터, 전기사업법 시행령 제36조 / 부칙)
- *    — 2024-07~2025-06은 3.2%, 그 전은 3.7%였다.
- *    청구금액 10원 미만 절사, 원 미만 절사 규칙은 한전 요금표 PDF 계산 예시를 따름.
+ * 4) \uBD80\uAC00\uAC00\uCE58\uC138 10% (\uC804\uAE30\uC694\uAE08\uACC4 \uAE30\uC900, \uC6D0 \uBBF8\uB9CC \uBC18\uC62C\uB9BC)
+ *    \uC804\uB825\uC0B0\uC5C5\uAE30\uBC18\uAE30\uAE08 2.7% (2025-07-01 \uC0AC\uC6A9\uBD84\uBD80\uD130, \uC804\uAE30\uC0AC\uC5C5\uBC95 \uC2DC\uD589\uB839 \uC81C36\uC870 / \uBD80\uCE59)
+ *    \u2014 2024-07~2025-06\uC740 3.2%, \uADF8 \uC804\uC740 3.7%\uC600\uB2E4.
+ *    \uCCAD\uAD6C\uAE08\uC561 10\uC6D0 \uBBF8\uB9CC \uC808\uC0AC, \uC6D0 \uBBF8\uB9CC \uC808\uC0AC \uADDC\uCE59\uC740 \uD55C\uC804 \uC694\uAE08\uD45C PDF \uACC4\uC0B0 \uC608\uC2DC\uB97C \uB530\uB984.
  *
- * 5) 계산 순서: 기본요금 + 전력량요금 + 기후환경요금 + 연료비조정요금 = 전기요금계
- *    → 부가가치세(전기요금계×10%) + 기금(전기요금계×2.7%, 10원 미만 버림) 합산 → 10원 미만 절사
- *    검증: 저압·기타계절 300kWh = 57,760원, 450kWh = 108,050원 (한전·공개자료 게시값과 일치)
+ * 5) \uACC4\uC0B0 \uC21C\uC11C: \uAE30\uBCF8\uC694\uAE08 + \uC804\uB825\uB7C9\uC694\uAE08 + \uAE30\uD6C4\uD658\uACBD\uC694\uAE08 + \uC5F0\uB8CC\uBE44\uC870\uC815\uC694\uAE08 = \uC804\uAE30\uC694\uAE08\uACC4
+ *    \u2192 \uBD80\uAC00\uAC00\uCE58\uC138(\uC804\uAE30\uC694\uAE08\uACC4\u00D710%) + \uAE30\uAE08(\uC804\uAE30\uC694\uAE08\uACC4\u00D72.7%, 10\uC6D0 \uBBF8\uB9CC \uBC84\uB9BC) \uD569\uC0B0 \u2192 10\uC6D0 \uBBF8\uB9CC \uC808\uC0AC
+ *    \uAC80\uC99D: \uC800\uC555\u00B7\uAE30\uD0C0\uACC4\uC808 300kWh = 57,760\uC6D0, 450kWh = 108,050\uC6D0 (\uD55C\uC804\u00B7\uACF5\uAC1C\uC790\uB8CC \uAC8C\uC2DC\uAC12\uACFC \uC77C\uCE58)
  *
- * ※ 복지할인·대가족·출산가구 할인, TV수신료, 검침일 차이에 따른 계절 안분은 반영하지 않는다.
+ * \u203B \uBCF5\uC9C0\uD560\uC778\u00B7\uB300\uAC00\uC871\u00B7\uCD9C\uC0B0\uAC00\uAD6C \uD560\uC778, TV\uC218\uC2E0\uB8CC, \uAC80\uCE68\uC77C \uCC28\uC774\uC5D0 \uB530\uB978 \uACC4\uC808 \uC548\uBD84\uC740 \uBC18\uC601\uD558\uC9C0 \uC54A\uB294\uB2E4.
  */
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) {
@@ -1224,20 +1224,20 @@
     checkedAt: '2026-11-20',
     climate: 9.0,
     fuel: 5.0,
-    fuelPeriod: '2026년 10~12월분',
+    fuelPeriod: '2026\uB144 10~12\uC6D4\uBD84',
     fundRate: 0.027,
     vatRate: 0.10,
     minMonthly: 1000,
     superUserFrom: 1000,
     types: {
       low: {
-        label: '주택용 저압',
+        label: '\uC8FC\uD0DD\uC6A9 \uC800\uC555',
         base: [910, 1600, 7300],
         rates: [120.0, 214.6, 307.3],
         superUser: 736.2
       },
       high: {
-        label: '주택용 고압',
+        label: '\uC8FC\uD0DD\uC6A9 \uACE0\uC555',
         base: [730, 1260, 6060],
         rates: [105.0, 174.0, 242.3],
         superUser: 601.3
@@ -1258,7 +1258,7 @@
     return TARIFF.bounds[season] || TARIFF.bounds.other;
   }
 
-  /** 총 사용량이 속한 누진 단계(1~3). */
+  /** \uCD1D \uC0AC\uC6A9\uB7C9\uC774 \uC18D\uD55C \uB204\uC9C4 \uB2E8\uACC4(1~3). */
   function tierOf(kwh, season) {
     var b = tierBounds(season);
     if (kwh <= b[0]) return 1;
@@ -1267,8 +1267,8 @@
   }
 
   /**
-   * 전력량요금(원). 구간별로 나눠 곱하고 원 미만은 버린다.
-   * 하계·동계 1,000kWh 초과분은 슈퍼유저 요율을 적용한다.
+   * \uC804\uB825\uB7C9\uC694\uAE08(\uC6D0). \uAD6C\uAC04\uBCC4\uB85C \uB098\uB220 \uACF1\uD558\uACE0 \uC6D0 \uBBF8\uB9CC\uC740 \uBC84\uB9B0\uB2E4.
+   * \uD558\uACC4\u00B7\uB3D9\uACC4 1,000kWh \uCD08\uACFC\uBD84\uC740 \uC288\uD37C\uC720\uC800 \uC694\uC728\uC744 \uC801\uC6A9\uD55C\uB2E4.
    */
   function energyCharge(kwh, type, season) {
     if (!(kwh > 0)) return 0;
@@ -1290,7 +1290,7 @@
   }
 
   /**
-   * 한 달 청구액 전체.
+   * \uD55C \uB2EC \uCCAD\uAD6C\uC561 \uC804\uCCB4.
    * @returns {{kwh:number,type:string,season:string,tier:number,
    *   base:number,energy:number,climate:number,fuel:number,
    *   subtotal:number,vat:number,fund:number,total:number}}
@@ -1331,7 +1331,7 @@
     };
   }
 
-  /** 가전의 월 소비전력량(kWh). */
+  /** \uAC00\uC804\uC758 \uC6D4 \uC18C\uBE44\uC804\uB825\uB7C9(kWh). */
   function applianceKwh(watts, hoursPerDay, daysPerMonth) {
     var w = Number(watts) || 0;
     var h = Number(hoursPerDay) || 0;
@@ -1340,18 +1340,18 @@
     return (w * h * d) / 1000;
   }
 
-  /** 220V 기준 전류(A). */
+  /** 220V \uAE30\uC900 \uC804\uB958(A). */
   function amps(watts, voltage) {
     var v = Number(voltage) || 220;
     return v > 0 ? (Number(watts) || 0) / v : 0;
   }
 
   /**
-   * 멀티탭 안전 판정.
-   * 일반 멀티탭 2,800W(12.7A) / 고용량 4,000W(16A), 가정용 15A 차단기 3,300W 기준.
-   * 안전: 정격 80%(2,240W) 이하 → safe
-   * 주의: 2,240W 초과 ~ 2,800W → warn
-   * 위험: 2,800W 초과 → danger
+   * \uBA40\uD2F0\uD0ED \uC548\uC804 \uD310\uC815.
+   * \uC77C\uBC18 \uBA40\uD2F0\uD0ED 2,800W(12.7A) / \uACE0\uC6A9\uB7C9 4,000W(16A), \uAC00\uC815\uC6A9 15A \uCC28\uB2E8\uAE30 3,300W \uAE30\uC900.
+   * \uC548\uC804: \uC815\uACA9 80%(2,240W) \uC774\uD558 \u2192 safe
+   * \uC8FC\uC758: 2,240W \uCD08\uACFC ~ 2,800W \u2192 warn
+   * \uC704\uD5D8: 2,800W \uCD08\uACFC \u2192 danger
    */
   var LIMITS = {
     normalWatts: 2800,
@@ -1403,7 +1403,7 @@
 });
 </script>
 <script>
-/* app.js — 가전 전기요금 계산기 UI (요금 계산은 tariff.js) */
+/* app.js \u2014 \uAC00\uC804 \uC804\uAE30\uC694\uAE08 \uACC4\uC0B0\uAE30 UI (\uC694\uAE08 \uACC4\uC0B0\uC740 tariff.js) */
 (function () {
   'use strict';
 
@@ -1411,24 +1411,24 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
-  /* ── 가전 프리셋 (소비전력은 제품 표기 정격의 대표값) ────────────── */
+  /* \u2500\u2500 \uAC00\uC804 \uD504\uB9AC\uC14B (\uC18C\uBE44\uC804\uB825\uC740 \uC81C\uD488 \uD45C\uAE30 \uC815\uACA9\uC758 \uB300\uD45C\uAC12) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   var PRESETS = [
-    { id: 'washer', name: '세탁기', emoji: '🧺', w: 2000, hours: 1.5, days: 12 },
-    { id: 'dryer', name: '건조기', emoji: '🌬️', w: 2000, hours: 1.5, days: 8 },
-    { id: 'airfryer', name: '에어프라이어', emoji: '🍟', w: 1500, hours: 0.5, days: 15 },
-    { id: 'microwave', name: '전자레인지', emoji: '🍲', w: 1000, hours: 0.2, days: 30 },
-    { id: 'induction', name: '인덕션', emoji: '🍳', w: 3400, hours: 1, days: 20 },
-    { id: 'kettle', name: '전기포트', emoji: '☕', w: 1500, hours: 0.2, days: 30 },
-    { id: 'heater', name: '전기히터', emoji: '🔥', w: 2000, hours: 3, days: 15 },
-    { id: 'blanket', name: '전기장판', emoji: '🛏️', w: 150, hours: 6, days: 30 },
-    { id: 'dehumidifier', name: '제습기', emoji: '💧', w: 300, hours: 8, days: 20 },
-    { id: 'fridge', name: '냉장고', emoji: '🧊', w: 50, hours: 24, days: 30 },
-    { id: 'tv', name: 'TV', emoji: '📺', w: 120, hours: 4, days: 30 },
-    { id: 'pc', name: '컴퓨터', emoji: '🖥️', w: 200, hours: 5, days: 25 },
-    { id: 'purifier', name: '공기청정기', emoji: '🌿', w: 40, hours: 24, days: 30 },
-    { id: 'fan', name: '선풍기', emoji: '🌀', w: 50, hours: 8, days: 20 },
-    { id: 'hairdryer', name: '헤어드라이어', emoji: '💨', w: 1800, hours: 0.2, days: 12 },
-    { id: 'robot', name: '로봇청소기', emoji: '🤖', w: 60, hours: 1, days: 20 }
+    { id: 'washer', name: '\uC138\uD0C1\uAE30', emoji: '\uD83E\uDDFA', w: 2000, hours: 1.5, days: 12 },
+    { id: 'dryer', name: '\uAC74\uC870\uAE30', emoji: '\uD83C\uDF2C\uFE0F', w: 2000, hours: 1.5, days: 8 },
+    { id: 'airfryer', name: '\uC5D0\uC5B4\uD504\uB77C\uC774\uC5B4', emoji: '\uD83C\uDF5F', w: 1500, hours: 0.5, days: 15 },
+    { id: 'microwave', name: '\uC804\uC790\uB808\uC778\uC9C0', emoji: '\uD83C\uDF72', w: 1000, hours: 0.2, days: 30 },
+    { id: 'induction', name: '\uC778\uB355\uC158', emoji: '\uD83C\uDF73', w: 3400, hours: 1, days: 20 },
+    { id: 'kettle', name: '\uC804\uAE30\uD3EC\uD2B8', emoji: '\u2615', w: 1500, hours: 0.2, days: 30 },
+    { id: 'heater', name: '\uC804\uAE30\uD788\uD130', emoji: '\uD83D\uDD25', w: 2000, hours: 3, days: 15 },
+    { id: 'blanket', name: '\uC804\uAE30\uC7A5\uD310', emoji: '\uD83D\uDECF\uFE0F', w: 150, hours: 6, days: 30 },
+    { id: 'dehumidifier', name: '\uC81C\uC2B5\uAE30', emoji: '\uD83D\uDCA7', w: 300, hours: 8, days: 20 },
+    { id: 'fridge', name: '\uB0C9\uC7A5\uACE0', emoji: '\uD83E\uDDCA', w: 50, hours: 24, days: 30 },
+    { id: 'tv', name: 'TV', emoji: '\uD83D\uDCFA', w: 120, hours: 4, days: 30 },
+    { id: 'pc', name: '\uCEF4\uD4E8\uD130', emoji: '\uD83D\uDDA5\uFE0F', w: 200, hours: 5, days: 25 },
+    { id: 'purifier', name: '\uACF5\uAE30\uCCAD\uC815\uAE30', emoji: '\uD83C\uDF3F', w: 40, hours: 24, days: 30 },
+    { id: 'fan', name: '\uC120\uD48D\uAE30', emoji: '\uD83C\uDF00', w: 50, hours: 8, days: 20 },
+    { id: 'hairdryer', name: '\uD5E4\uC5B4\uB4DC\uB77C\uC774\uC5B4', emoji: '\uD83D\uDCA8', w: 1800, hours: 0.2, days: 12 },
+    { id: 'robot', name: '\uB85C\uBD07\uCCAD\uC18C\uAE30', emoji: '\uD83E\uDD16', w: 60, hours: 1, days: 20 }
   ];
 
   var HEAT_IDS = { heater: 1, induction: 1, dryer: 1, kettle: 1, hairdryer: 1 };
@@ -1441,7 +1441,7 @@
     seq: 0
   };
 
-  /* ── 포맷 ─────────────────────────────────────────── */
+  /* \u2500\u2500 \uD3EC\uB9F7 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   function fmt(n) {
     return Math.round(n).toLocaleString('ko-KR');
   }
@@ -1450,7 +1450,7 @@
     return v.toLocaleString('ko-KR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   }
   function won(n) {
-    return fmt(n) + '원';
+    return fmt(n) + '\uC6D0';
   }
   function pct(n) {
     if (!isFinite(n)) return '0';
@@ -1460,7 +1460,7 @@
     return Math.min(max, Math.max(min, v));
   }
 
-  /* ── 계산 ─────────────────────────────────────────── */
+  /* \u2500\u2500 \uACC4\uC0B0 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   function analyze() {
     var before = T.computeBill(state.baseKwh, state.type, state.season);
     var running = state.baseKwh;
@@ -1489,7 +1489,7 @@
     return { picked: picked, watts: watts, report: T.multitapReport(watts) };
   }
 
-  /* ── 프리셋 렌더 ──────────────────────────────────── */
+  /* \u2500\u2500 \uD504\uB9AC\uC14B \uB80C\uB354 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   function renderPresets() {
     var box = $('#presets');
     box.innerHTML = '';
@@ -1499,7 +1499,7 @@
       b.className = 'preset';
       b.dataset.preset = p.id;
       b.setAttribute('aria-pressed', 'false');
-      b.setAttribute('aria-label', p.name + ' ' + fmt(p.w) + 'W 추가');
+      b.setAttribute('aria-label', p.name + ' ' + fmt(p.w) + 'W \uCD94\uAC00');
       b.innerHTML =
         '<span class="p-emoji" aria-hidden="true">' + p.emoji + '</span>' +
         '<span class="p-name">' + p.name + '</span>' +
@@ -1540,7 +1540,7 @@
     refresh();
   }
 
-  /* ── 선택 가전 렌더 ───────────────────────────────── */
+  /* \u2500\u2500 \uC120\uD0DD \uAC00\uC804 \uB80C\uB354 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   function renderItems() {
     var box = $('#selected');
     box.innerHTML = '';
@@ -1550,7 +1550,7 @@
       empty.className = 'hint';
       empty.style.marginTop = '4px';
       empty.id = 'selected-empty';
-      empty.textContent = '아직 고른 가전이 없어요. 위에서 가전을 누르면 아래에 추가됩니다.';
+      empty.textContent = '\uC544\uC9C1 \uACE0\uB978 \uAC00\uC804\uC774 \uC5C6\uC5B4\uC694. \uC704\uC5D0\uC11C \uAC00\uC804\uC744 \uB204\uB974\uBA74 \uC544\uB798\uC5D0 \uCD94\uAC00\uB429\uB2C8\uB2E4.';
       box.appendChild(empty);
       return;
     }
@@ -1568,8 +1568,8 @@
       var remove = document.createElement('button');
       remove.type = 'button';
       remove.className = 'item-remove';
-      remove.setAttribute('aria-label', it.name + ' 삭제');
-      remove.textContent = '×';
+      remove.setAttribute('aria-label', it.name + ' \uC0AD\uC81C');
+      remove.textContent = '\u00D7';
       remove.addEventListener('click', function () {
         state.items = state.items.filter(function (x) { return x.key !== it.key; });
         renderItems();
@@ -1582,9 +1582,9 @@
       var controls = document.createElement('div');
       controls.className = 'item-controls';
       controls.innerHTML =
-        '<label>소비전력<input type="number" inputmode="numeric" min="1" max="8000" step="10" data-field="w"></label>' +
-        '<label>하루<input type="number" inputmode="decimal" min="0.1" max="24" step="0.5" data-field="hours"></label>' +
-        '<label>한 달<input type="number" inputmode="numeric" min="1" max="31" step="1" data-field="days"></label>';
+        '<label>\uC18C\uBE44\uC804\uB825<input type="number" inputmode="numeric" min="1" max="8000" step="10" data-field="w"></label>' +
+        '<label>\uD558\uB8E8<input type="number" inputmode="decimal" min="0.1" max="24" step="0.5" data-field="hours"></label>' +
+        '<label>\uD55C \uB2EC<input type="number" inputmode="numeric" min="1" max="31" step="1" data-field="days"></label>';
       controls.querySelector('[data-field="w"]').value = it.w;
       controls.querySelector('[data-field="hours"]').value = it.hours;
       controls.querySelector('[data-field="days"]').value = it.days;
@@ -1597,9 +1597,9 @@
       var cb = document.createElement('input');
       cb.type = 'checkbox';
       cb.checked = !!it.multitap;
-      cb.setAttribute('aria-label', it.name + ' 같은 멀티탭에 사용');
+      cb.setAttribute('aria-label', it.name + ' \uAC19\uC740 \uBA40\uD2F0\uD0ED\uC5D0 \uC0AC\uC6A9');
       label.appendChild(cb);
-      label.appendChild(document.createTextNode('같은 멀티탭'));
+      label.appendChild(document.createTextNode('\uAC19\uC740 \uBA40\uD2F0\uD0ED'));
       foot.appendChild(label);
 
       var kwh = document.createElement('span');
@@ -1642,12 +1642,12 @@
     });
   }
 
-  /* ── 결과 렌더 ────────────────────────────────────── */
+  /* \u2500\u2500 \uACB0\uACFC \uB80C\uB354 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   function refresh() {
     var a = analyze();
     var hasItems = state.items.length > 0;
 
-    /* 항목별 수치 갱신 */
+    /* \uD56D\uBAA9\uBCC4 \uC218\uCE58 \uAC31\uC2E0 */
     $$('#selected .item').forEach(function (row) {
       var key = Number(row.dataset.key);
       var idx = -1;
@@ -1657,38 +1657,38 @@
       var res = a.perItem[idx];
       row.querySelector('.item-name small').textContent = fmt(it.w) + 'W';
       row.querySelector('.item-kwh').textContent = fmt1(res.kwh) + ' kWh';
-      row.querySelector('.item-cost').textContent = (res.cost >= 0 ? '+' : '−') + won(Math.abs(res.cost));
+      row.querySelector('.item-cost').textContent = (res.cost >= 0 ? '+' : '\u2212') + won(Math.abs(res.cost));
     });
 
-    /* 기본 사용량 안내 */
+    /* \uAE30\uBCF8 \uC0AC\uC6A9\uB7C9 \uC548\uB0B4 */
     var before = a.before;
     var bounds = T.tierBounds(state.season);
     var nextBound = before.tier < 3 ? bounds[before.tier - 1] : null;
-    var baseHint = '지금 ' + before.tier + '단계 · 기본요금 ' + won(before.base) + ' · 청구액 ' + won(before.total);
+    var baseHint = '\uC9C0\uAE08 ' + before.tier + '\uB2E8\uACC4 \u00B7 \uAE30\uBCF8\uC694\uAE08 ' + won(before.base) + ' \u00B7 \uCCAD\uAD6C\uC561 ' + won(before.total);
     if (nextBound !== null) {
-      baseHint += ' · 다음 단계까지 ' + fmt1(Math.max(0, nextBound - state.baseKwh)) + 'kWh';
+      baseHint += ' \u00B7 \uB2E4\uC74C \uB2E8\uACC4\uAE4C\uC9C0 ' + fmt1(Math.max(0, nextBound - state.baseKwh)) + 'kWh';
     } else {
-      baseHint += ' · 이미 3단계입니다';
+      baseHint += ' \u00B7 \uC774\uBBF8 3\uB2E8\uACC4\uC785\uB2C8\uB2E4';
     }
     $('#base-hint').textContent = baseHint;
 
-    /* 큰 금액 */
+    /* \uD070 \uAE08\uC561 */
     $('#total-bill').textContent = won(a.after.total);
 
     var deltaEl = $('#delta');
     if (!hasItems) {
       deltaEl.className = 'delta';
-      deltaEl.innerHTML = '가전을 고르면 늘어나는 금액이 여기에 표시됩니다.';
+      deltaEl.innerHTML = '\uAC00\uC804\uC744 \uACE0\uB974\uBA74 \uB298\uC5B4\uB098\uB294 \uAE08\uC561\uC774 \uC5EC\uAE30\uC5D0 \uD45C\uC2DC\uB429\uB2C8\uB2E4.';
     } else {
       var ratio = a.before.total > 0 ? (a.delta / a.before.total) * 100 : 0;
       deltaEl.className = 'delta' + (a.delta > 0 ? ' up' : '');
       deltaEl.innerHTML =
-        '지금 ' + won(a.before.total) + ' → <strong>' +
-        (a.delta >= 0 ? '+' : '−') + won(Math.abs(a.delta)) +
-        '</strong> (' + (a.delta >= 0 ? '+' : '−') + pct(Math.abs(ratio)) + '%)';
+        '\uC9C0\uAE08 ' + won(a.before.total) + ' \u2192 <strong>' +
+        (a.delta >= 0 ? '+' : '\u2212') + won(Math.abs(a.delta)) +
+        '</strong> (' + (a.delta >= 0 ? '+' : '\u2212') + pct(Math.abs(ratio)) + '%)';
     }
 
-    /* 비교 바 */
+    /* \uBE44\uAD50 \uBC14 */
     $('#compare').hidden = !hasItems;
     if (hasItems) {
       $('#compare-before').textContent = won(a.before.total);
@@ -1697,16 +1697,16 @@
       $('#bar-before').style.width = (a.before.total / maxV) * 100 + '%';
       $('#bar-after').style.width = '100%';
       $('#compare-note').textContent =
-        '추가 사용 ' + fmt1(a.addedKwh) + 'kWh · 한 달 총 ' + fmt1(a.totalKwh) + 'kWh';
+        '\uCD94\uAC00 \uC0AC\uC6A9 ' + fmt1(a.addedKwh) + 'kWh \u00B7 \uD55C \uB2EC \uCD1D ' + fmt1(a.totalKwh) + 'kWh';
     }
 
-    /* 누진 단계 */
+    /* \uB204\uC9C4 \uB2E8\uACC4 */
     var after = a.after;
     var tail = Math.max(60, bounds[1] * 0.6);
     var span = bounds[1] + tail;
     $('#z1-label').textContent = '~' + fmt(bounds[0]) + 'kWh';
     $('#z2-label').textContent = fmt(bounds[0] + 1) + '~' + fmt(bounds[1]);
-    $('#z3-label').textContent = fmt(bounds[1]) + ' 초과';
+    $('#z3-label').textContent = fmt(bounds[1]) + ' \uCD08\uACFC';
     var zones = $$('#tier-track .tier-zone');
     zones[0].style.flexGrow = String(bounds[0]);
     zones[1].style.flexGrow = String(bounds[1] - bounds[0]);
@@ -1723,45 +1723,45 @@
     var badge = $('#tier-badge');
     var note = $('#tier-note');
     if (after.tier > before.tier) {
-      badge.textContent = before.tier + '단계 → ' + after.tier + '단계';
+      badge.textContent = before.tier + '\uB2E8\uACC4 \u2192 ' + after.tier + '\uB2E8\uACC4';
       badge.className = 'tier-badge rise';
       note.textContent =
-        '누진 ' + after.tier + '단계로 올라갑니다. 기본요금이 ' + won(after.base) +
-        '로 바뀌고 ' + fmt(bounds[after.tier - 2]) + 'kWh 초과분 단가는 ' +
-        T.TARIFF.types[after.type].rates[after.tier - 1].toFixed(1) + '원이라 요금이 크게 늘어납니다.';
+        '\uB204\uC9C4 ' + after.tier + '\uB2E8\uACC4\uB85C \uC62C\uB77C\uAC11\uB2C8\uB2E4. \uAE30\uBCF8\uC694\uAE08\uC774 ' + won(after.base) +
+        '\uB85C \uBC14\uB00C\uACE0 ' + fmt(bounds[after.tier - 2]) + 'kWh \uCD08\uACFC\uBD84 \uB2E8\uAC00\uB294 ' +
+        T.TARIFF.types[after.type].rates[after.tier - 1].toFixed(1) + '\uC6D0\uC774\uB77C \uC694\uAE08\uC774 \uD06C\uAC8C \uB298\uC5B4\uB0A9\uB2C8\uB2E4.';
     } else if (after.tier === 3) {
-      badge.textContent = '3단계 유지';
+      badge.textContent = '3\uB2E8\uACC4 \uC720\uC9C0';
       badge.className = 'tier-badge high';
       note.textContent =
-        '이미 3단계입니다. 1kWh마다 ' + T.TARIFF.types[after.type].rates[2].toFixed(1) +
-        '원이 붙어 가전 하나만 써도 요금이 크게 늘어납니다.';
+        '\uC774\uBBF8 3\uB2E8\uACC4\uC785\uB2C8\uB2E4. 1kWh\uB9C8\uB2E4 ' + T.TARIFF.types[after.type].rates[2].toFixed(1) +
+        '\uC6D0\uC774 \uBD99\uC5B4 \uAC00\uC804 \uD558\uB098\uB9CC \uC368\uB3C4 \uC694\uAE08\uC774 \uD06C\uAC8C \uB298\uC5B4\uB0A9\uB2C8\uB2E4.';
     } else {
-      badge.textContent = after.tier + '단계 유지';
+      badge.textContent = after.tier + '\uB2E8\uACC4 \uC720\uC9C0';
       badge.className = 'tier-badge';
       var room = bounds[after.tier - 1] - after.kwh;
-      note.textContent = '같은 ' + after.tier + '단계 안에서 ' + fmt1(room) + 'kWh 여유가 있습니다.';
+      note.textContent = '\uAC19\uC740 ' + after.tier + '\uB2E8\uACC4 \uC548\uC5D0\uC11C ' + fmt1(room) + 'kWh \uC5EC\uC720\uAC00 \uC788\uC2B5\uB2C8\uB2E4.';
     }
 
-    /* 계산 내역 */
+    /* \uACC4\uC0B0 \uB0B4\uC5ED */
     var rows = [
-      ['기본요금', before.base, after.base],
-      ['전력량요금', before.energy, after.energy],
-      ['기후환경요금 (9.0원/kWh)', before.climate, after.climate],
-      ['연료비조정요금 (5.0원/kWh)', before.fuel, after.fuel],
-      ['부가가치세 10%', before.vat, after.vat],
-      ['전력산업기반기금 2.7%', before.fund, after.fund]
+      ['\uAE30\uBCF8\uC694\uAE08', before.base, after.base],
+      ['\uC804\uB825\uB7C9\uC694\uAE08', before.energy, after.energy],
+      ['\uAE30\uD6C4\uD658\uACBD\uC694\uAE08 (9.0\uC6D0/kWh)', before.climate, after.climate],
+      ['\uC5F0\uB8CC\uBE44\uC870\uC815\uC694\uAE08 (5.0\uC6D0/kWh)', before.fuel, after.fuel],
+      ['\uBD80\uAC00\uAC00\uCE58\uC138 10%', before.vat, after.vat],
+      ['\uC804\uB825\uC0B0\uC5C5\uAE30\uBC18\uAE30\uAE08 2.7%', before.fund, after.fund]
     ];
     var html = rows.map(function (r) {
       return '<tr><th scope="row">' + r[0] + '</th><td>' + won(r[1]) + '</td><td class="after-col">' + won(r[2]) + '</td></tr>';
     }).join('');
-    html += '<tr class="total"><th scope="row">청구액</th><td>' + won(before.total) + '</td><td class="after-col">' + won(after.total) + '</td></tr>';
+    html += '<tr class="total"><th scope="row">\uCCAD\uAD6C\uC561</th><td>' + won(before.total) + '</td><td class="after-col">' + won(after.total) + '</td></tr>';
     $('#breakdown-body').innerHTML = html;
 
-    /* 멀티탭 */
+    /* \uBA40\uD2F0\uD0ED */
     renderSafety();
 
-    /* 하단 고정 바 */
-    $('#sticky-delta').textContent = hasItems ? (a.delta >= 0 ? '+' : '−') + won(Math.abs(a.delta)) : '0원';
+    /* \uD558\uB2E8 \uACE0\uC815 \uBC14 */
+    $('#sticky-delta').textContent = hasItems ? (a.delta >= 0 ? '+' : '\u2212') + won(Math.abs(a.delta)) : '0\uC6D0';
     $('#sticky-delta').style.color = a.delta > 0 ? '#f04452' : '#1b64da';
   }
 
@@ -1776,7 +1776,7 @@
       body.hidden = true;
       empty.hidden = false;
       stickyDot.className = 'dot';
-      stickyText.textContent = '안전 진단 전';
+      stickyText.textContent = '\uC548\uC804 \uC9C4\uB2E8 \uC804';
       return;
     }
     body.hidden = false;
@@ -1791,28 +1791,28 @@
     var tips = [];
 
     if (r.level === 'safe') {
-      pill.textContent = '안전';
+      pill.textContent = '\uC548\uC804';
       pill.className = 'pill';
-      msg.textContent = '일반 멀티탭(2,800W)으로도 쓸 수 있는 범위입니다. 정격의 ' + Math.round(r.normalRatio * 100) + '%를 쓰고 있어요.';
+      msg.textContent = '\uC77C\uBC18 \uBA40\uD2F0\uD0ED(2,800W)\uC73C\uB85C\uB3C4 \uC4F8 \uC218 \uC788\uB294 \uBC94\uC704\uC785\uB2C8\uB2E4. \uC815\uACA9\uC758 ' + Math.round(r.normalRatio * 100) + '%\uB97C \uC4F0\uACE0 \uC788\uC5B4\uC694.';
     } else if (r.level === 'warn') {
-      pill.textContent = '주의';
+      pill.textContent = '\uC8FC\uC758';
       pill.className = 'pill warn';
-      msg.textContent = '일반 멀티탭 정격(2,800W)에 가깝습니다. 권장 한도인 2,240W를 넘어 발열 위험이 커집니다.';
-      tips.push('고용량 멀티탭(4,000W·16A)으로 바꾸거나 콘센트를 나눠 쓰세요.');
+      msg.textContent = '\uC77C\uBC18 \uBA40\uD2F0\uD0ED \uC815\uACA9(2,800W)\uC5D0 \uAC00\uAE5D\uC2B5\uB2C8\uB2E4. \uAD8C\uC7A5 \uD55C\uB3C4\uC778 2,240W\uB97C \uB118\uC5B4 \uBC1C\uC5F4 \uC704\uD5D8\uC774 \uCEE4\uC9D1\uB2C8\uB2E4.';
+      tips.push('\uACE0\uC6A9\uB7C9 \uBA40\uD2F0\uD0ED(4,000W\u00B716A)\uC73C\uB85C \uBC14\uAFB8\uAC70\uB098 \uCF58\uC13C\uD2B8\uB97C \uB098\uB220 \uC4F0\uC138\uC694.');
     } else {
-      pill.textContent = '위험';
+      pill.textContent = '\uC704\uD5D8';
       pill.className = 'pill danger';
       if (r.overHigh) {
-        msg.textContent = '고용량 멀티탭 정격(4,000W)까지 넘었습니다. 이 구성은 한 멀티탭에 걸 수 없습니다.';
-        tips.push('열을 내는 가전은 서로 다른 콘센트(회로)에 나눠 꽂아야 합니다.');
+        msg.textContent = '\uACE0\uC6A9\uB7C9 \uBA40\uD2F0\uD0ED \uC815\uACA9(4,000W)\uAE4C\uC9C0 \uB118\uC5C8\uC2B5\uB2C8\uB2E4. \uC774 \uAD6C\uC131\uC740 \uD55C \uBA40\uD2F0\uD0ED\uC5D0 \uAC78 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.';
+        tips.push('\uC5F4\uC744 \uB0B4\uB294 \uAC00\uC804\uC740 \uC11C\uB85C \uB2E4\uB978 \uCF58\uC13C\uD2B8(\uD68C\uB85C)\uC5D0 \uB098\uB220 \uAF42\uC544\uC57C \uD569\uB2C8\uB2E4.');
       } else {
-        msg.textContent = '일반 멀티탭 정격(2,800W·12.7A)을 넘었습니다. 그대로 쓰면 발열·화재 위험이 있습니다.';
-        tips.push('고용량 멀티탭으로 바꾸거나, 한두 개를 다른 콘센트로 옮기세요.');
+        msg.textContent = '\uC77C\uBC18 \uBA40\uD2F0\uD0ED \uC815\uACA9(2,800W\u00B712.7A)\uC744 \uB118\uC5C8\uC2B5\uB2C8\uB2E4. \uADF8\uB300\uB85C \uC4F0\uBA74 \uBC1C\uC5F4\u00B7\uD654\uC7AC \uC704\uD5D8\uC774 \uC788\uC2B5\uB2C8\uB2E4.';
+        tips.push('\uACE0\uC6A9\uB7C9 \uBA40\uD2F0\uD0ED\uC73C\uB85C \uBC14\uAFB8\uAC70\uB098, \uD55C\uB450 \uAC1C\uB97C \uB2E4\uB978 \uCF58\uC13C\uD2B8\uB85C \uC62E\uAE30\uC138\uC694.');
       }
     }
 
     if (r.overBreaker15) {
-      tips.push('가정용 15A 차단기(약 3,300W)를 넘어 차단기가 내려갈 수 있습니다.');
+      tips.push('\uAC00\uC815\uC6A9 15A \uCC28\uB2E8\uAE30(\uC57D 3,300W)\uB97C \uB118\uC5B4 \uCC28\uB2E8\uAE30\uAC00 \uB0B4\uB824\uAC08 \uC218 \uC788\uC2B5\uB2C8\uB2E4.');
     }
 
     var heat = s.picked.filter(function (it) { return HEAT_IDS[it.presetId]; }).map(function (it) { return it.name; });
@@ -1822,31 +1822,31 @@
 
     if (heat.length) {
       tips.push(
-        (heat.length > 1 ? heat.join('·') + '처럼 열을 내는 가전은' : heat[0] + '은') +
-        ' 한 멀티탭에 겹쳐 꽂기보다 단독 콘센트에 꽂는 편이 안전합니다.'
+        (heat.length > 1 ? heat.join('\u00B7') + '\uCC98\uB7FC \uC5F4\uC744 \uB0B4\uB294 \uAC00\uC804\uC740' : heat[0] + '\uC740') +
+        ' \uD55C \uBA40\uD2F0\uD0ED\uC5D0 \uACB9\uCCD0 \uAF42\uAE30\uBCF4\uB2E4 \uB2E8\uB3C5 \uCF58\uC13C\uD2B8\uC5D0 \uAF42\uB294 \uD3B8\uC774 \uC548\uC804\uD569\uB2C8\uB2E4.'
       );
     }
     if (heavy.length) {
-      tips.push(heavy.join('·') + '은 소비전력이 커서 벽면 콘센트에 단독으로 꽂는 편이 안전합니다.');
+      tips.push(heavy.join('\u00B7') + '\uC740 \uC18C\uBE44\uC804\uB825\uC774 \uCEE4\uC11C \uBCBD\uBA74 \uCF58\uC13C\uD2B8\uC5D0 \uB2E8\uB3C5\uC73C\uB85C \uAF42\uB294 \uD3B8\uC774 \uC548\uC804\uD569\uB2C8\uB2E4.');
     }
 
-    tips.push('멀티탭에 적힌 정격(예: 16A 250V)을 확인하고, 문어발식 연결은 피하세요.');
+    tips.push('\uBA40\uD2F0\uD0ED\uC5D0 \uC801\uD78C \uC815\uACA9(\uC608: 16A 250V)\uC744 \uD655\uC778\uD558\uACE0, \uBB38\uC5B4\uBC1C\uC2DD \uC5F0\uACB0\uC740 \uD53C\uD558\uC138\uC694.');
 
     $('#safety-tips').innerHTML = tips.map(function (t) { return '<li>' + escapeHtml(t) + '</li>'; }).join('');
     $('#gauge-fill').style.width = clamp((r.watts / 4500) * 100, 0, 100) + '%';
     $('#gauge-mark').style.left = clamp((r.watts / 4500) * 100, 0, 100) + '%';
     $('#gauge-desc').textContent =
-      '정격 소비전력 ' + fmt(r.watts) + '와트, 220볼트 기준 ' + fmt1(r.amps) + '암페어. 일반 멀티탭 정격 2,800와트의 ' + Math.round(r.normalRatio * 100) + '퍼센트입니다.';
+      '\uC815\uACA9 \uC18C\uBE44\uC804\uB825 ' + fmt(r.watts) + '\uC640\uD2B8, 220\uBCFC\uD2B8 \uAE30\uC900 ' + fmt1(r.amps) + '\uC554\uD398\uC5B4. \uC77C\uBC18 \uBA40\uD2F0\uD0ED \uC815\uACA9 2,800\uC640\uD2B8\uC758 ' + Math.round(r.normalRatio * 100) + '\uD37C\uC13C\uD2B8\uC785\uB2C8\uB2E4.';
     $('#safety-items').innerHTML = s.picked.map(function (it) {
       return '<span>' + escapeHtml(it.name) + ' ' + fmt(it.w) + 'W</span>';
     }).join('');
 
-    var label = r.level === 'safe' ? '안전' : r.level === 'warn' ? '주의' : '위험';
+    var label = r.level === 'safe' ? '\uC548\uC804' : r.level === 'warn' ? '\uC8FC\uC758' : '\uC704\uD5D8';
     stickyDot.className = 'dot ' + r.level;
-    stickyText.textContent = '멀티탭 ' + label + ' · ' + fmt1(r.amps) + 'A';
+    stickyText.textContent = '\uBA40\uD2F0\uD0ED ' + label + ' \u00B7 ' + fmt1(r.amps) + 'A';
   }
 
-  /* ── 기본 입력 이벤트 ─────────────────────────────── */
+  /* \u2500\u2500 \uAE30\uBCF8 \uC785\uB825 \uC774\uBCA4\uD2B8 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   function setType(t) {
     state.type = t;
     $$('#type-seg button').forEach(function (b) {
@@ -1861,9 +1861,9 @@
       b.setAttribute('aria-pressed', b.dataset.season === s ? 'true' : 'false');
     });
     var hints = {
-      other: '1단계가 200kWh까지입니다. 전력량 단가는 120.0 / 214.6 / 307.3원입니다.',
-      summer: '7~8월은 1단계가 300kWh까지로 넓어져 같은 사용량도 요금이 낮습니다.',
-      winter: '동계(12~2월)는 1,000kWh를 넘는 부분에 슈퍼유저 요율 736.2원/kWh이 붙습니다.'
+      other: '1\uB2E8\uACC4\uAC00 200kWh\uAE4C\uC9C0\uC785\uB2C8\uB2E4. \uC804\uB825\uB7C9 \uB2E8\uAC00\uB294 120.0 / 214.6 / 307.3\uC6D0\uC785\uB2C8\uB2E4.',
+      summer: '7~8\uC6D4\uC740 1\uB2E8\uACC4\uAC00 300kWh\uAE4C\uC9C0\uB85C \uB113\uC5B4\uC838 \uAC19\uC740 \uC0AC\uC6A9\uB7C9\uB3C4 \uC694\uAE08\uC774 \uB0AE\uC2B5\uB2C8\uB2E4.',
+      winter: '\uB3D9\uACC4(12~2\uC6D4)\uB294 1,000kWh\uB97C \uB118\uB294 \uBD80\uBD84\uC5D0 \uC288\uD37C\uC720\uC800 \uC694\uC728 736.2\uC6D0/kWh\uC774 \uBD99\uC2B5\uB2C8\uB2E4.'
     };
     $('#season-hint').textContent = hints[s];
     refresh();
@@ -1882,23 +1882,23 @@
   }
 
   function addCustom() {
-    var name = $('#new-name').value.trim() || '내 가전';
+    var name = $('#new-name').value.trim() || '\uB0B4 \uAC00\uC804';
     var w = parseFloat($('#new-w').value);
     var hours = parseFloat($('#new-hours').value);
     var days = parseFloat($('#new-days').value);
     var hint = $('#add-hint');
 
     if (!isFinite(w) || w <= 0) {
-      hint.textContent = '소비전력(W)을 1 이상으로 입력해 주세요.';
+      hint.textContent = '\uC18C\uBE44\uC804\uB825(W)\uC744 1 \uC774\uC0C1\uC73C\uB85C \uC785\uB825\uD574 \uC8FC\uC138\uC694.';
       $('#new-w').focus();
       return;
     }
     if (!isFinite(hours) || hours <= 0) {
-      hint.textContent = '하루 사용시간을 입력해 주세요.';
+      hint.textContent = '\uD558\uB8E8 \uC0AC\uC6A9\uC2DC\uAC04\uC744 \uC785\uB825\uD574 \uC8FC\uC138\uC694.';
       return;
     }
     if (!isFinite(days) || days <= 0) {
-      hint.textContent = '한 달 사용일수를 입력해 주세요.';
+      hint.textContent = '\uD55C \uB2EC \uC0AC\uC6A9\uC77C\uC218\uB97C \uC785\uB825\uD574 \uC8FC\uC138\uC694.';
       return;
     }
 
@@ -1906,13 +1906,13 @@
       key: ++state.seq,
       presetId: null,
       name: name.slice(0, 16),
-      emoji: '🔌',
+      emoji: '\uD83D\uDD0C',
       w: clamp(Math.round(w), 1, 8000),
       hours: clamp(hours, 0.1, 24),
       days: clamp(Math.round(days), 1, 31),
       multitap: false
     });
-    hint.textContent = name + ' ' + fmt(w) + 'W를 목록에 추가했습니다.';
+    hint.textContent = name + ' ' + fmt(w) + 'W\uB97C \uBAA9\uB85D\uC5D0 \uCD94\uAC00\uD588\uC2B5\uB2C8\uB2E4.';
     $('#new-name').value = '';
     $('#new-w').value = '';
     renderItems();
@@ -1920,7 +1920,7 @@
     refresh();
   }
 
-  /* ── 초기화 ───────────────────────────────────────── */
+  /* \u2500\u2500 \uCD08\uAE30\uD654 \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
   function init() {
     renderPresets();
     renderItems();
