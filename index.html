@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>가전 전기요금 계산기 · 누진제 청구액과 멀티탭 용량 안전 진단</title>
+<meta name="description" content="가전별 소비전력으로 한 달 전기 사용량과 주택용 누진제 청구액을 계산하고, 같은 멀티탭에 꽂았을 때 전류·용량이 안전한지 진단합니다. 2026년 4분기 한전 요금 기준." />
+<meta name="theme-color" content="#f2f4f6" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="가전 전기요금 계산기 · 멀티탭 용량 안전 진단" />
+<meta property="og:description" content="쓰는 가전만 고르면 이번 달 청구액이 얼마나 늘어나는지, 한 멀티탭에 꽂아도 되는지 바로 나옵니다." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#calc">본문으로 바로가기</a>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="badge"><span class="badge-dot" aria-hidden="true"></span>2026년 4분기 한전 요금 기준 · 11월 20일 확인</p>
+    <h1>가전 전기요금<br class="br-mobile" /> 계산기</h1>
+    <p class="lede">쓰는 가전만 고르면 <strong>이번 달 청구액이 얼마나 늘어나는지</strong>, 그 가전들을 <strong>한 멀티탭에 꽂아도 되는지</strong> 바로 계산합니다.</p>
+  </div>
+</header>
+
+<main class="wrap" id="calc">
+
+  <!-- 1. 우리 집 기준 -->
+  <section class="card" aria-labelledby="h-base">
+    <div class="card-head">
+      <span class="step" aria-hidden="true">1</span>
+      <h2 id="h-base">우리 집 기준</h2>
+    </div>
+
+    <div class="field">
+      <span class="field-label" id="label-type">주거 형태</span>
+      <div class="segmented" role="group" aria-labelledby="label-type" id="type-seg">
+        <button type="button" data-type="low" aria-pressed="true">
+          <span class="seg-title">주택용 저압</span>
+          <span class="seg-sub">단독·빌라·오피스텔</span>
+        </button>
+        <button type="button" data-type="high" aria-pressed="false">
+          <span class="seg-title">주택용 고압</span>
+          <span class="seg-sub">아파트 단지 계약</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field-label" id="label-season">계절</span>
+      <div class="segmented" role="group" aria-labelledby="label-season" id="season-seg">
+        <button type="button" data-season="other" aria-pressed="true">기타 계절</button>
+        <button type="button" data-season="summer" aria-pressed="false">하계 7~8월</button>
+        <button type="button" data-season="winter" aria-pressed="false">동계 12~2월</button>
+      </div>
+      <p class="hint" id="season-hint">1단계가 200kWh까지입니다.</p>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="base-kwh">지금 한 달 전기 사용량</label>
+      <div class="input-unit">
+        <input id="base-kwh" type="number" inputmode="numeric" min="0" max="2000" step="10" value="300" />
+        <span class="unit">kWh</span>
+      </div>
+      <input id="base-range" class="range" type="range" min="0" max="1200" step="10" value="300" aria-label="한 달 전기 사용량 조절" />
+      <div class="quick-row" id="quick-row">
+        <button type="button" data-kwh="200">200</button>
+        <button type="button" data-kwh="300">300</button>
+        <button type="button" data-kwh="350">350</button>
+        <button type="button" data-kwh="450">450</button>
+      </div>
+      <p class="hint" id="base-hint"></p>
+    </div>
+  </section>
+
+  <!-- 2. 가전 -->
+  <section class="card" aria-labelledby="h-appliance">
+    <div class="card-head">
+      <span class="step" aria-hidden="true">2</span>
+      <h2 id="h-appliance">쓰는 가전 고르기</h2>
+    </div>
+    <p class="hint hint-top">가전을 누르면 아래 목록에 추가됩니다. 사용 시간과 일수는 직접 고칠 수 있어요. 냉장고는 소비전력 변동이 커서 상시 50W(월 36kWh)로 계산합니다.</p>
+    <div class="presets" id="presets"></div>
+
+    <div class="selected" id="selected"></div>
+
+    <details class="add-box">
+      <summary>목록에 없는 가전 직접 입력</summary>
+      <div class="add-grid">
+        <label class="add-field add-name">이름
+          <input id="new-name" type="text" maxlength="16" placeholder="예: 노트북 충전기" />
+        </label>
+        <label class="add-field">소비전력
+          <span class="input-suffix"><input id="new-w" type="number" inputmode="numeric" min="1" max="8000" step="10" placeholder="65" /><span>W</span></span>
+        </label>
+        <label class="add-field">하루
+          <span class="input-suffix"><input id="new-hours" type="number" inputmode="decimal" min="0.1" max="24" step="0.5" value="2" /><span>시간</span></span>
+        </label>
+        <label class="add-field">한 달
+          <span class="input-suffix"><input id="new-days" type="number" inputmode="numeric" min="1" max="31" step="1" value="30" /><span>일</span></span>
+        </label>
+        <button type="button" class="btn-primary add-btn" id="add-btn">추가하기</button>
+      </div>
+      <p class="hint" id="add-hint" role="status" aria-live="polite"></p>
+    </details>
+  </section>
+
+  <!-- 3. 결과 -->
+  <section class="card result-card" id="result-card" aria-labelledby="h-result">
+    <div class="card-head">
+      <span class="step" aria-hidden="true">3</span>
+      <h2 id="h-result">이번 달 예상 청구액</h2>
+    </div>
+
+    <div class="big-money">
+      <span class="big-label">총 예상 청구액</span>
+      <strong class="big-value" id="total-bill">—</strong>
+      <p class="delta" id="delta"></p>
+    </div>
+
+    <div class="compare" id="compare" hidden>
+      <div class="compare-row">
+        <span>지금 사용량</span><strong id="compare-before">—</strong>
+      </div>
+      <div class="compare-row after">
+        <span>가전 추가 후</span><strong id="compare-after">—</strong>
+      </div>
+      <div class="compare-bar"><span class="bar-before" id="bar-before"></span><span class="bar-after" id="bar-after"></span></div>
+      <p class="compare-note" id="compare-note"></p>
+    </div>
+
+    <div class="tier-block">
+      <div class="tier-head">
+        <span class="field-label">누진 단계</span>
+        <span class="tier-badge" id="tier-badge">—</span>
+      </div>
+      <div class="tier-track" id="tier-track">
+        <div class="tier-zone z1" data-tier="1"><span>1단계</span><small id="z1-label"></small></div>
+        <div class="tier-zone z2" data-tier="2"><span>2단계</span><small id="z2-label"></small></div>
+        <div class="tier-zone z3" data-tier="3"><span>3단계</span><small id="z3-label"></small></div>
+        <span class="tier-marker before" id="marker-before" title="지금 사용량"></span>
+        <span class="tier-marker after" id="marker-after" title="가전 추가 후"></span>
+      </div>
+      <p class="tier-note" id="tier-note"></p>
+    </div>
+
+    <table class="breakdown">
+      <caption class="sr-only">청구액 계산 내역</caption>
+      <thead>
+        <tr><th scope="col">항목</th><th scope="col">지금</th><th scope="col">가전 추가 후</th></tr>
+      </thead>
+      <tbody id="breakdown-body"></tbody>
+    </table>
+    <p class="fineprint">복지할인·대가족 할인, TV수신료, 검침일 차이는 넣지 않았습니다. 실제 고지서와 조금 다를 수 있습니다.</p>
+  </section>
+
+  <!-- 4. 멀티탭 안전 -->
+  <section class="card safety-card" aria-labelledby="h-safety">
+    <div class="card-head">
+      <span class="step" aria-hidden="true">4</span>
+      <h2 id="h-safety">멀티탭 안전 진단</h2>
+    </div>
+    <p class="hint hint-top">위 목록에서 <strong>같은 멀티탭</strong>에 체크한 가전을 220V 한 회로에 동시에 쓸 때입니다.</p>
+
+    <div class="safety-empty" id="safety-empty">
+      <p class="empty-title">아직 체크한 가전이 없어요</p>
+      <p class="empty-desc">목록의 ‘같은 멀티탭’에 체크하면 정격 소비전력 합계와 전류(A)를 계산해 안전한지 알려드립니다.</p>
+      <div class="limits">
+        <span>일반 멀티탭 <strong>2,800W · 12.7A</strong></span>
+        <span>고용량 멀티탭 <strong>4,000W · 16A</strong></span>
+        <span>가정용 15A 차단기 <strong>약 3,300W</strong></span>
+      </div>
+    </div>
+
+    <div class="safety-body" id="safety-body" hidden>
+      <div class="safety-head">
+        <div class="safety-numbers">
+          <strong id="safety-watt">0 W</strong>
+          <span id="safety-amp">0 A</span>
+        </div>
+        <span class="pill" id="safety-pill">안전</span>
+      </div>
+
+      <div class="gauge" role="img" aria-labelledby="gauge-desc">
+        <div class="gauge-track">
+          <span class="gauge-fill" id="gauge-fill"></span>
+          <span class="gauge-mark" id="gauge-mark"></span>
+        </div>
+        <div class="gauge-scale">
+          <span style="left:0">0</span>
+          <span class="mid" style="left:62.2%">2,800W<br /><em>일반</em></span>
+          <span class="mid" style="left:88.9%">4,000W<br /><em>고용량 상한</em></span>
+        </div>
+      </div>
+      <p class="sr-only" id="gauge-desc"></p>
+
+      <p class="safety-message" id="safety-message" role="status" aria-live="polite"></p>
+      <ul class="tips" id="safety-tips"></ul>
+      <div class="safety-items" id="safety-items"></div>
+    </div>
+  </section>
+
+  <!-- 요금 근거 -->
+  <details class="card basis" aria-labelledby="h-basis">
+    <summary id="h-basis">적용한 요금표와 계산 근거</summary>
+    <div class="basis-body">
+      <p class="basis-lead">한국전력 「주택용 전력」 요금표(2023년 11월 9일 시행분이 2026년 11월 현재까지 현행)와 기본공급약관 제67조를 기준으로 계산합니다.</p>
+      <div class="table-scroll">
+        <table class="rate-table">
+          <caption>주택용 전력 기본요금 · 전력량요금</caption>
+          <thead>
+            <tr><th scope="col">구분</th><th scope="col">1단계</th><th scope="col">2단계</th><th scope="col">3단계</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">저압 기본요금</th><td>910원</td><td>1,600원</td><td>7,300원</td></tr>
+            <tr><th scope="row">저압 전력량</th><td>120.0원</td><td>214.6원</td><td>307.3원</td></tr>
+            <tr><th scope="row">고압 기본요금</th><td>730원</td><td>1,260원</td><td>6,060원</td></tr>
+            <tr><th scope="row">고압 전력량</th><td>105.0원</td><td>174.0원</td><td>242.3원</td></tr>
+            <tr><th scope="row">구간(기타 계절)</th><td>~200kWh</td><td>201~400kWh</td><td>400kWh 초과</td></tr>
+            <tr><th scope="row">구간(하계 7~8월)</th><td>~300kWh</td><td>301~450kWh</td><td>450kWh 초과</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="basis-list">
+        <li>기후환경요금 <strong>9.0원/kWh</strong> (2023년 1월 1일부터, 이후 변경 없음)</li>
+        <li>연료비조정요금 <strong>+5.0원/kWh</strong> — 2026년 4분기(10~12월분). 한전이 산정한 필요단가는 7.3원이었으나 상한 ±5원이 적용됐습니다.</li>
+        <li>부가가치세 <strong>10%</strong>, 전력산업기반기금 <strong>2.7%</strong>(2025년 7월 사용분부터, 그 전 3.2%) — 전기요금계 기준</li>
+        <li>1,000kWh 초과분은 하계·동계에 슈퍼유저 요율(저압 736.2원, 고압 601.3원/kWh)이 적용됩니다.</li>
+        <li>청구금액은 10원 미만 절사, 월 최저요금은 저압 1,000원입니다.</li>
+      </ul>
+      <p class="basis-src">출처: <a href="https://home.kepco.co.kr/kepco/front/html/CY/E/E/CYEEHP00101.html" target="_blank" rel="noopener">한전 전기요금표</a> · <a href="https://www.kepco.co.kr/home/media/newsroom/notice/boardView.do?boardMngNo=14&amp;boardNo=2759" target="_blank" rel="noopener">2026년 4분기 연료비조정단가 공지</a> · <a href="https://www.easylaw.go.kr/CSP/IssueQaRetrieve.laf?issueqaSeq=407" target="_blank" rel="noopener">법제처 생활법령(기본공급약관 제67조)</a></p>
+    </div>
+  </details>
+
+  <!-- 수익화 · 블로그 연동 -->
+  <section class="promo" aria-label="살림비용노트와 안전 용품">
+    <a class="blog-card" href="https://salimcostnote.blogspot.com/" target="_blank" rel="noopener">
+      <span class="blog-kicker">살림비용노트</span>
+      <span class="blog-title">전기·수도·통신요금, 숫자로 따져보는 살림 비용 계산</span>
+      <span class="blog-more">블로그에서 더 보기 →</span>
+    </a>
+
+    <!-- 광고 슬롯: 애드센스 승인 후 이 div 안에 광고 코드를 넣으면 됩니다. -->
+    <div class="ad-slot" data-slot="ad-1" aria-hidden="true">
+      <span>광고 영역</span>
+    </div>
+
+    <div class="affiliate">
+      <p class="affiliate-title">같이 보면 좋은 안전 용품</p>
+      <div class="affiliate-grid">
+        <!-- 제휴 링크 자리: href에 쿠팡 파트너스·네이버 쇼핑 커넥트 링크를 넣으세요. -->
+        <a class="affiliate-card" href="#" data-slot="affiliate-1">
+          <span class="aff-thumb" aria-hidden="true">🔌</span>
+          <span class="aff-name">고용량 누전차단 멀티탭</span>
+          <span class="aff-desc">4,000W·16A, 개별 스위치</span>
+          <span class="aff-cta">제휴 링크 자리</span>
+        </a>
+        <a class="affiliate-card" href="#" data-slot="affiliate-2">
+          <span class="aff-thumb" aria-hidden="true">⚡</span>
+          <span class="aff-name">대기전력 차단 멀티탭</span>
+          <span class="aff-desc">대기전력 10% 줄이기</span>
+          <span class="aff-cta">제휴 링크 자리</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>이 계산기는 참고용입니다. 실제 청구액은 검침일, 복지할인, TV수신료, 계약종별에 따라 달라질 수 있습니다.</p>
+    <p class="footer-meta">요금 기준 2026-11-20 확인 · <a href="https://salimcostnote.blogspot.com/" target="_blank" rel="noopener">살림비용노트</a></p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="sticky-inner">
+    <div class="sticky-money">
+      <span>월 추가 요금</span>
+      <strong id="sticky-delta">0원</strong>
+    </div>
+    <div class="sticky-safety">
+      <span class="dot" id="sticky-dot" aria-hidden="true"></span>
+      <span id="sticky-safety">안전 진단 전</span>
+    </div>
+  </div>
+</div>
+
+<noscript>
+  <p class="noscript">이 계산기는 자바스크립트로 동작합니다. 브라우저에서 자바스크립트를 켜 주세요.</p>
+</noscript>
+
+<script src="tariff.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
